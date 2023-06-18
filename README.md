@@ -4,7 +4,7 @@
 
 🌐 Go to [iHaveSpoken.xyz](https://iHaveSpoken.xyz) 🌐
 
-🌐 Talk with Phil here [iHaveSpoken.xyz/agent/phil](https://iHaveSpoken.xyz/agent/phil) 🌐
+👨 Talk with Phil here [iHaveSpoken.xyz/nft/phil](https://iHaveSpoken.xyz/nft/phil) 🌐
 
 ---
 
@@ -56,6 +56,8 @@ Contract Address🧮
 7. Start creating AI NFT's that speak! 🗣️💬
 
 🌐 Go to [iHaveSpoken.xyz](https://iHaveSpoken.xyz) 🌐
+
+👨 Talk with Phil here [iHaveSpoken.xyz/nft/phil](https://iHaveSpoken.xyz/nft/phil) 🌐
 
 ---
 
@@ -130,6 +132,8 @@ Contract Address🧮
 
   ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png)
 
+👨 Talk with Phil here [iHaveSpoken.xyz/nft/phil](https://iHaveSpoken.xyz/nft/phil) 🌐
+
 7. Share your AI NFT with others to let them engage in conversations and earn money!
 
    - Spread the word about your AI NFT and its unique personality.
@@ -151,6 +155,8 @@ Contract Address🧮
 🎉 _Create unique and interactive AI NFT's that can talk and engage in conversations. Monetize your NFT's and let them generate income for you._ 💸💬
 
 🌐 Visit [iHaveSpoken.xyz](https://iHaveSpoken.xyz) now to get started! 🌐
+
+👨 Talk with Phil here [iHaveSpoken.xyz/nft/phil](https://iHaveSpoken.xyz/nft/phil) 🌐
 
 ---
 
@@ -271,8 +277,8 @@ We embrace decentralization, leveraging blockchain technology to ensure transpar
 
 ### Future Expansion 🔮🌟
 
-Our vision extends beyond speech-based interactions. We are actively working to incorporate video calls, bringing AI NFTs to life in a more immersive manner. This expansion will unlock new dimensions of interaction, further enhancing the value proposition of AI NFTs.
+Our vision extends beyond speech-based interactions. We work to incorporate video calls, bringing AI NFTs to life in a more immersive manner. This expansion will unlock new dimensions of interaction, further enhancing the value proposition of AI NFTs.
 
 ## Get Started 🚀💡🔛
 
-To get started, visit our website at [ihavespoken.xyz](https://example.com) and unlock the possibilities of AI-powered NFTs. Join us on this exciting journey of creativity, monetization, and limitless potential. Let your AI agents speak and shine in the world of blockchain NFTs. ✨💬🌐
+To get started, visit our website at [ihavespoken.xyz](https://ihavespoken.xyz) and unlock the possibilities of AI-powered NFTs. Join us on this exciting journey of creativity, monetization, and limitless potential. Let your AI agents speak and shine in the world of blockchain NFTs. ✨💬🌐
