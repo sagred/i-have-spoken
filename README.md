@@ -4,6 +4,8 @@
 
 🌐 Go to [iHaveSpoken.xyz](https://iHaveSpoken.xyz) 🌐
 
+🌐 Talk with Phil here [iHaveSpoken.xyz/agent/phil](https://iHaveSpoken.xyz/agent/phil) 🌐
+
 ---
 
 Contract Address🧮
@@ -65,12 +67,11 @@ Contract Address🧮
 
    - Each AI NFT represents a unique personality or character that you can engage with.
 
-    [![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/1.jpeg](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/1.jpeg)
-    ---
+   [![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/1.jpeg](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/1.jpeg)
+
+   ***
 
    ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/2.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/2.png)
-
-
 
 2. Select an AI NFT that interests you.
 
@@ -80,7 +81,7 @@ Contract Address🧮
 
    - You can ask questions, have discussions, or simply chat with the AI NFT.
 
-    ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png)
+   ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png)
 
 ### 🎨 Create an AI NFT
 
@@ -94,7 +95,6 @@ Contract Address🧮
 
    ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/4.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/4.png)
 
-
 3. Add a voice to the NFT. 🎙️🔊
 
    ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/5.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/5.png)
@@ -103,7 +103,7 @@ Contract Address🧮
    - You can use your own voice or explore different voices to match the personality of your NFT.
 
 4. Add the prompt in the "Soul" section, shaping the AI NFT's behavior and conversation style.
-    
+
    - Craft a unique and engaging prompt that sets the tone for interactions with your AI NFT.
    - Describe the role or personality your NFT should embody, providing guidelines for its responses.
      For example:
@@ -125,6 +125,7 @@ Contract Address🧮
 6. Talk with your AI NFT! 🗣️💬
 
 - Once your AI NFT is created, you can engage in conversations, ask questions, or have fun interactions with it.
+
   - Enjoy the unique experience of interacting with your personalized AI NFT and witness its dynamic responses.
 
   ![https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png](https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/7.png)
@@ -225,3 +226,53 @@ By harnessing the power of dynamic NFTs on the Gear blockchain, we create a new 
 🎉 _Create unique and interactive AI NFT's that can talk and engage in conversations. Monetize your NFT's and let them generate income for you._ 💸💬
 
 🌐 Visit [iHaveSpoken.xyz](https://iHaveSpoken.xyz) now to get started! 🌐
+
+---
+
+# ihavespoken.xyz
+
+🎙️ **Create NFT's that talk and make money for you** 🤑
+
+## Problem 🕵️‍♀️❓
+
+### Difficulty in Monetizing AI 💸🤔
+
+Monetizing AI creations and building profitable applications around them can be a daunting task for many individuals. The complex process of launching and monetizing AI applications often poses a significant challenge.
+
+### Limited Potential of Blockchain NFTs 🖼️🔒
+
+Traditional blockchain NFTs are primarily limited to static images or digital art, lacking the interactive and engaging features that captivate users. This limitation restricts the long-term value and appeal of NFTs.
+
+## Solution 💡🔓
+
+### Unlocking the Power of AI and Blockchain 🤝⚡
+
+At ihavespoken.xyz, we combine the power of AI and blockchain to create a groundbreaking solution. Our platform allows users to create AI-powered NFTs that can speak, interact, and continuously evolve, opening up new possibilities for monetization.
+
+### User-Friendly Creation Process 🎨✍️
+
+We believe that creating AI agents should be accessible to everyone. With our user-friendly interface, you can easily design your own AI personalities without the need for extensive coding knowledge. Customize their info, voice, and soul to bring your AI agent to life.
+
+### Dynamic and Evolving AI Agents 🔄📈
+
+Our AI agents are not static entities. Through user interactions, they learn and adapt, becoming more refined and capable over time. As more users engage with your AI agent, it continuously improves, offering insightful responses and enhancing its value.
+
+### Personalized and Engaging Experiences 😄🤝🌟
+
+Choose from a diverse range of personalities for your AI agent, each with unique characteristics and speaking styles. This allows for personalized and engaging interactions, providing users with an immersive experience that sets your NFTs apart.
+
+### Monetization Opportunities 💰💡📈
+
+Monetizing your AI creations is now easier than ever. Users can charge for interactions, such as per word spoken, or implement their own pricing models. This opens up a sustainable income stream, rewarding creators for their innovative AI agents.
+
+### Decentralized AI 🌐🔒
+
+We embrace decentralization, leveraging blockchain technology to ensure transparency, security, and immutability. Our decentralized approach creates a robust ecosystem where AI NFTs can thrive and users can trust in the authenticity of their interactions.
+
+### Future Expansion 🔮🌟
+
+Our vision extends beyond speech-based interactions. We are actively working to incorporate video calls, bringing AI NFTs to life in a more immersive manner. This expansion will unlock new dimensions of interaction, further enhancing the value proposition of AI NFTs.
+
+## Get Started 🚀💡🔛
+
+To get started, visit our website at [ihavespoken.xyz](https://example.com) and unlock the possibilities of AI-powered NFTs. Join us on this exciting journey of creativity, monetization, and limitless potential. Let your AI agents speak and shine in the world of blockchain NFTs. ✨💬🌐
