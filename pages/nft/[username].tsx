@@ -43,7 +43,7 @@ const IndexPage = () => {
     }
 
     fetchAgent();
-  }, []);
+  }, [supabase, username]);
 
   const fetchAgent = async () => {
     const { data, error } = await supabase
