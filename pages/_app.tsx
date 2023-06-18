@@ -10,8 +10,8 @@ import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { Analytics } from "@vercel/analytics/react";
 
-const pageTitle = "Warp";
-const description = "Warp - Voice chat with Anyone, Anywhere, Anytime";
+const pageTitle = "I Have Spoken";
+const description = "I Have Spoken - Create NFT's that talk";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [supabaseClient] = useState(() => createBrowserSupabaseClient());
@@ -31,7 +31,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:description" content={description} key="ogdesc" />
         <title>{pageTitle}</title>
 
-        <meta property="og:site_name" content={"Warp Phone"} key="ogsitename" />
+        <meta
+          property="og:site_name"
+          content={"I Have Spoken"}
+          key="ogsitename"
+        />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
       </Head>

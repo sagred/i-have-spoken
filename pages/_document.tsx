@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const pageTitle = "Warp";
-const description = "Warp - Voice chat with Anyone, Anywhere, Anytime";
+const pageTitle = "I Have Spoken";
+const description = "I Have Spoken - Create NFT's that talk";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -41,23 +41,7 @@ class MyDocument extends Document {
           <meta name="twitter:creator" content={"sagredd"} key="twhandle" />
 
           {/* Open Graph */}
-          <meta
-            property="og:url"
-            content={"https://warp.sag17.tech/"}
-            key="ogurl"
-          />
-          <meta
-            property="og:image"
-            content={
-              "https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/warp/public/new.png"
-            }
-            key="ogimage"
-          />
-          <meta
-            property="og:site_name"
-            content={"Warp Portal"}
-            key="ogsitename"
-          />
+
           <meta property="og:title" content={pageTitle} key="ogtitle" />
           <meta property="og:description" content={description} key="ogdesc" />
         </Head>
