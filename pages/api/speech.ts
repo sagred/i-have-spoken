@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     model: "text-davinci-003",
     prompt: text,
     temperature: 0.5,
-    max_tokens: 60,
+    max_tokens: 30,
     top_p: 1.0,
     frequency_penalty: 0.5,
     presence_penalty: 0.0,
