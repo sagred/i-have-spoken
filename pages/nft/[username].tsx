@@ -119,84 +119,78 @@ const IndexPage = ({ agent }) => {
     ssr: false,
   });
 
-  if (agent) {
-    return (
-      <>
-        <Meta
-          title={agent.name}
-          description={agent.description}
-          ogImgUrl={agent.image_url}
-          ogUrl="https://IHaveSpoken.xyz/nft/elon"
-        />
-        <div className="mt-20 flex h-full flex-col items-center ">
-          <div className="group relative">
-            <div
-              className={`absolute -inset-1 ${
-                isLoading ? "animate-spin" : ""
-              }   opacity-100  blur-3xl`}
-            >
+  return (
+    <>
+      <Meta
+        title={agent.name}
+        description={agent.description}
+        ogImgUrl={agent.image_url}
+        ogUrl="https://IHaveSpoken.xyz/nft/elon"
+      />
+      <div className="mt-20 flex h-full flex-col items-center ">
+        <div className="group relative">
+          <div
+            className={`absolute -inset-1 ${
+              isLoading ? "animate-spin" : ""
+            }   opacity-100  blur-3xl`}
+          >
+            <img
+              src={agent.image_url}
+              alt="Elon"
+              className="w-80  rounded-full object-cover"
+              width={512}
+              height={512}
+            />
+          </div>
+          <div className="items-top relative flex justify-start leading-none ring-1 ring-gray-900/5">
+            <div className="flex items-center justify-center ">
               <img
                 src={agent.image_url}
                 alt="Elon"
-                className="w-80  rounded-full object-cover"
+                className="w-80 rounded-full object-cover"
                 width={512}
                 height={512}
               />
             </div>
-            <div className="items-top relative flex justify-start leading-none ring-1 ring-gray-900/5">
-              <div className="flex items-center justify-center ">
-                <img
-                  src={agent.image_url}
-                  alt="Elon"
-                  className="w-80 rounded-full object-cover"
-                  width={512}
-                  height={512}
-                />
-              </div>
-            </div>
           </div>
+        </div>
 
-          <h3 className="mt-4 text-xl font-semibold">{agent.name}</h3>
+        <h3 className="mt-4 text-xl font-semibold">{agent.name}</h3>
 
-          {/* <p>Microphone: {listening ? "on" : "off"}</p>
+        {/* <p>Microphone: {listening ? "on" : "off"}</p>
         <p>Loading: {isLoading ? "true" : "false"}</p> */}
-          <div className="mt-10">
+        <div className="mt-10">
+          <div
+            className={`relative m-5 cursor-pointer transition-all duration-200 ease-out `}
+            onClick={() => {
+              SpeechRecognition.startListening();
+              handleSpeechOnPress();
+            }}
+          >
             <div
-              className={`relative m-5 cursor-pointer transition-all duration-200 ease-out `}
-              onClick={() => {
-                SpeechRecognition.startListening();
-                handleSpeechOnPress();
-              }}
+              className={`absolute  ${
+                listening ? "-inset-5 animate-spin" : " -inset-1"
+              }  rounded-full bg-gradient-to-r from-yellow-400 via-gray-50 to-teal-300 p-4 blur-xl transition-all  duration-200 ease-out`}
             >
-              <div
-                className={`absolute  ${
-                  listening ? "-inset-5 animate-spin" : " -inset-1"
-                }  rounded-full bg-gradient-to-r from-yellow-400 via-gray-50 to-teal-300 p-4 blur-xl transition-all  duration-200 ease-out`}
-              >
-                <Image src={Mic} alt="mic" width={40} height={40} />
-              </div>
-              <div
-                className={`${
-                  listening ? "opacity-60" : "opacity-100"
-                } relative rounded-full bg-neutral-50 p-4 transition-all duration-200 ease-out`}
-              >
-                <Image src={Mic} alt="mic" width={40} height={40} />
-              </div>
+              <Image src={Mic} alt="mic" width={40} height={40} />
+            </div>
+            <div
+              className={`${
+                listening ? "opacity-60" : "opacity-100"
+              } relative rounded-full bg-neutral-50 p-4 transition-all duration-200 ease-out`}
+            >
+              <Image src={Mic} alt="mic" width={40} height={40} />
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 };
 
 export default IndexPage;
 
 export const getServerSideProps = async ({ req }) => {
-  const supabaseUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co";
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0cnZqZHR3ZGZuYmpleXRkanZ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MjA0NTU4MSwiZXhwIjoxOTk3NjIxNTgxfQ.ngROr05aRAXWDnPvI3xpvxfBjzLvb36_8TBv6Ouwb2c";
-  const supabase = createClient(supabaseUrl, supabaseKey);
   const { url = "" } = req;
   const urlSlug = url.split("nft/")[1];
   console.log(urlSlug);
