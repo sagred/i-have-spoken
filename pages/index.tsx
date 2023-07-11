@@ -6,7 +6,6 @@ import TH from "../public/tomHolland.png";
 import CE from "../public/chrisEvans.png";
 import Logo from "../components/ui/Logo";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "../components/Icons";
 
@@ -47,11 +46,6 @@ const Upcoming = ({ imageSrc, name }) => {
 };
 
 const IndexPage = ({ agents }) => {
-  const router = useRouter();
-
-  const handleLink = (username) => {
-    router.replace(`/nft/${username}`);
-  };
   return (
     <>
       <div className="flex flex-col items-start justify-center">
@@ -68,32 +62,34 @@ const IndexPage = ({ agents }) => {
         <div className="flex h-full max-w-xl flex-wrap items-center justify-start">
           {agents.map((agent, indx) => {
             return (
-              <div key={indx} onClick={() => handleLink(agent.username)}>
-                <div className="group relative m-2 cursor-pointer rounded-sm border border-white">
-                  <div className={`absolute -inset-1  opacity-100  blur-3xl`}>
-                    <img
-                      src={agent.image_url}
-                      alt="My Image"
-                      className="w-40  rounded-sm object-cover"
-                      width={200}
-                      height={200}
-                    />
-                  </div>
-                  <div className="items-top relative flex justify-start leading-none ring-1 ring-gray-900/5">
-                    <div className="flex items-center justify-center ">
+              <div key={indx}>
+                <Link href={`/nft/${agent.username}`} key={agent.username}>
+                  <div className="group relative m-2 rounded-sm border border-white">
+                    <div className={`absolute -inset-1  opacity-100  blur-3xl`}>
                       <img
                         src={agent.image_url}
                         alt="My Image"
-                        className="w-40 rounded-sm object-cover"
+                        className="w-40  rounded-sm object-cover"
                         width={200}
                         height={200}
                       />
                     </div>
+                    <div className="items-top relative flex justify-start leading-none ring-1 ring-gray-900/5">
+                      <div className="flex items-center justify-center ">
+                        <img
+                          src={agent.image_url}
+                          alt="My Image"
+                          className="w-40 rounded-sm object-cover"
+                          width={200}
+                          height={200}
+                        />
+                      </div>
+                    </div>
+                    <h3 className="bg-white text-center font-semibold text-black">
+                      {agent.name}
+                    </h3>
                   </div>
-                  <h3 className="bg-white text-center font-semibold text-black">
-                    {agent.name}
-                  </h3>
-                </div>
+                </Link>
               </div>
             );
           })}

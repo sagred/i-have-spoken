@@ -193,6 +193,10 @@ const IndexPage = ({ agent }) => {
 export default IndexPage;
 
 export const getServerSideProps = async ({ req }) => {
+  const supabaseUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0cnZqZHR3ZGZuYmpleXRkanZ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MjA0NTU4MSwiZXhwIjoxOTk3NjIxNTgxfQ.ngROr05aRAXWDnPvI3xpvxfBjzLvb36_8TBv6Ouwb2c";
+  const supabase = createClient(supabaseUrl, supabaseKey);
   const { url = "" } = req;
   const urlSlug = url.split("nft/")[1];
   console.log(urlSlug);
