@@ -9,6 +9,8 @@ import useUser from "../../utils/store/useUser";
 import { useRouter } from "next/router";
 import { createSpeechlySpeechRecognition } from "@speechly/speech-recognition-polyfill";
 import { createClient } from "@supabase/supabase-js";
+import Head from "next/head";
+import Meta from "../../components/Meta";
 
 const appId = process.env.NEXT_PUBLIC_SPEECHLY_APP_ID;
 const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
@@ -19,7 +21,8 @@ const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0cnZqZHR3ZGZuYmpleXRkanZ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MjA0NTU4MSwiZXhwIjoxOTk3NjIxNTgxfQ.ngROr05aRAXWDnPvI3xpvxfBjzLvb36_8TBv6Ouwb2c";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const IndexPage = () => {
+const IndexPage = ({ agent }) => {
+  console.log(agent);
   const router = useRouter();
 
   const { username } = router.query;
@@ -33,33 +36,13 @@ const IndexPage = () => {
 
   const { user, isUserReady } = useUser();
 
-  const [agent, setAgent] = useState(null);
-
   useEffect(() => {
     if (isUserReady) {
       // if (user === null) {
       //   router.push("/auth");
       // }
     }
-
-    fetchAgent();
   }, [supabase, username]);
-
-  const fetchAgent = async () => {
-    const { data, error } = await supabase
-      .from("agents")
-      .select("*")
-      .eq("username", username);
-
-    if (error) {
-      console.error("Error fetching agents:", error.message);
-      return;
-    }
-
-    console.log(data);
-
-    setAgent(data[0]);
-  };
 
   const {
     transcript,
@@ -138,8 +121,13 @@ const IndexPage = () => {
 
   if (agent) {
     return (
-      <Extention>
-        <Wallet />
+      <>
+        <Meta
+          title={"Elon Musk"}
+          description={agent.description}
+          ogImgUrl={agent.image_url}
+          ogUrl="https://IHaveSpoken.xyz/nft/elon"
+        />
         <div className="mt-20 flex h-full flex-col items-center ">
           <div className="group relative">
             <div
@@ -197,9 +185,27 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-      </Extention>
+      </>
     );
   }
 };
 
 export default IndexPage;
+
+export const getServerSideProps = async ({ req }) => {
+  const { url = "" } = req;
+  const urlSlug = url.split("nft/")[1];
+  console.log(urlSlug);
+
+  const { data, error } = await supabase
+    .from("agents")
+    .select("*")
+    .eq("username", urlSlug);
+
+  if (error) {
+    console.error("Error fetching agents:", error.message);
+    return;
+  }
+
+  return { props: { agent: data[0] } };
+};

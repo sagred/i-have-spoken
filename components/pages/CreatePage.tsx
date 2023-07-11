@@ -4,7 +4,6 @@ import Elon from "../../public/elon.png";
 
 import Link from "next/link";
 import { useAccount } from "@gear-js/react-hooks";
-import { useOwnerNFTs, useSendNFTMessage } from "../../hooks/api";
 
 const NftInitialState = {
   title: "",
@@ -35,17 +34,12 @@ const CreatePage = () => {
   const [prompt, setPrompt] = useState("");
   const [fee, setFee] = useState("");
 
-  const { ownerNFTs, isOwnerNFTsRead } = useOwnerNFTs();
-
-  console.log(ownerNFTs, isOwnerNFTsRead);
-
   const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setNftForm({ ...nftForm, [name]: value });
   };
 
   const { account } = useAccount();
-  const sendMessage = useSendNFTMessage();
 
   console.log(account?.decodedAddress);
   const resetForm = () => {
@@ -69,11 +63,6 @@ const CreatePage = () => {
         tokenMetadata,
       },
     };
-    sendMessage(payload, {
-      onSuccess: () => {
-        resetForm();
-      },
-    });
   };
 
   const [selectedImage, setSelectedImage] = useState(null);

@@ -43,9 +43,7 @@ const IndexPage = () => {
 
   if (typeof window !== "undefined") {
     return (
-      <Extention>
-        <Wallet />
-
+      <>
         <div className="flex flex-col items-start justify-center">
           <h3 className="z-50 mt-5 w-full  p-1  text-2xl font-bold text-white">
             Choose to speak
@@ -111,7 +109,7 @@ const IndexPage = () => {
             </h3>
           </div>
         </div>
-      </Extention>
+      </>
     );
   }
 };
