@@ -123,7 +123,7 @@ const IndexPage = ({ agent }) => {
     return (
       <>
         <Meta
-          title={"Elon Musk"}
+          title={agent.name}
           description={agent.description}
           ogImgUrl={agent.image_url}
           ogUrl="https://IHaveSpoken.xyz/nft/elon"
@@ -206,6 +206,7 @@ export const getServerSideProps = async ({ req }) => {
     console.error("Error fetching agents:", error.message);
     return;
   }
+  console.log("gello");
 
   return { props: { agent: data[0] } };
 };
