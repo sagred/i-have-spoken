@@ -63,7 +63,11 @@ const IndexPage = ({ agents }) => {
           {agents.map((agent, indx) => {
             return (
               <div key={indx}>
-                <Link href={`/nft/${agent.username}`}>
+                <Link
+                  href={`/nft/${agent.username}`}
+                  key={agent.username}
+                  shallow={true}
+                >
                   <div className="group relative m-2 rounded-sm border border-white">
                     <div className={`absolute -inset-1  opacity-100  blur-3xl`}>
                       <img
