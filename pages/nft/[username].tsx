@@ -160,7 +160,7 @@ const IndexPage = ({ agent }) => {
 
           {/* <p>Microphone: {listening ? "on" : "off"}</p>
         <p>Loading: {isLoading ? "true" : "false"}</p> */}
-          <div className="absolute bottom-32 md:bottom-10">
+          <div className="mt-10">
             <div
               className={`relative m-5 cursor-pointer transition-all duration-200 ease-out `}
               onClick={() => {

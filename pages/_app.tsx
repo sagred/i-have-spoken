@@ -9,6 +9,7 @@ import "regenerator-runtime/runtime";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { Analytics } from "@vercel/analytics/react";
+import NextNProgress from "nextjs-progressbar";
 
 const pageTitle = "I Have Spoken";
 const description = "I Have Spoken - Create NFT's that talk";
@@ -23,7 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      
+      <NextNProgress
+        color="#ffffff"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+        showOnShallow={true}
+      />
       <SessionContextProvider
         supabaseClient={supabaseClient}
         initialSession={pageProps.initialSession}
