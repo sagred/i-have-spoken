@@ -11,6 +11,7 @@ import { GithubIcon, LinkedInIcon, TwitterIcon } from "../components/Icons";
 
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
+import Meta from "../components/Meta";
 
 const supabaseUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co";
 const supabaseKey =
@@ -48,6 +49,7 @@ const Upcoming = ({ imageSrc, name }) => {
 const IndexPage = ({ agents }) => {
   return (
     <>
+      <Meta />
       <div className="flex flex-col items-start justify-center">
         <h3 className="z-50 mt-5 w-full  p-1  text-2xl font-bold text-white">
           Choose to speak
