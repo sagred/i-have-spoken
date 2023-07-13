@@ -20,7 +20,7 @@ const Logo = () => {
           color="white"
           show={true}
         >
-          <h1 className="text-2xl font-bold text-black ">IHaveSpoken.xyz</h1>
+          <h1 className="text-4xl font-bold text-black ">IHaveSpoken.xyz</h1>
         </RoughNotation>
       </div>
     </Link>
