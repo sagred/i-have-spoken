@@ -5,7 +5,7 @@ const siteUrl = "https://IHaveSpoken.xyz";
 export default function Meta({
   title = "I Have Spoken",
   description = "I Have Spoken - Create NFT's that talk",
-  ogImgUrl = "/og-image.png",
+  ogImgUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/meta.png",
   ogUrl = siteUrl,
 }) {
   return (
