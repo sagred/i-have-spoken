@@ -122,10 +122,10 @@ const IndexPage = ({ agent }) => {
   return (
     <>
       <Meta
-        title={agent.name}
+        title={`I Have Spoken | ${agent.name}`}
         description={agent.description}
         ogImgUrl={agent.image_url}
-        ogUrl="https://IHaveSpoken.xyz/nft/elon"
+        ogUrl={`https://IHaveSpoken.xyz/nft/${agent.username}`}
       />
       <div className="mt-20 flex h-full flex-col items-center ">
         <div className="group relative">
