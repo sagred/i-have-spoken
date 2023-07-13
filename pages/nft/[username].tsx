@@ -190,15 +190,32 @@ const IndexPage = ({ agent }) => {
 
 export default IndexPage;
 
-export const getServerSideProps = async ({ req }) => {
-  const { url = "" } = req;
-  const urlSlug = url.split("nft/")[1];
-  console.log(urlSlug);
+// export const getServerSideProps = async ({ req }) => {
+//   const { url = "" } = req;
+//   const urlSlug = url.split("nft/")[1];
+//   console.log(urlSlug);
+
+//   const { data, error } = await supabase
+//     .from("agents")
+//     .select("*")
+//     .eq("username", urlSlug);
+
+//   if (error) {
+//     console.error("Error fetching agents:", error.message);
+//     return;
+//   }
+//   console.log("gello");
+
+//   return { props: { agent: data[0] } };
+// };
+
+export async function getStaticProps({ params }) {
+  const { username } = params;
 
   const { data, error } = await supabase
     .from("agents")
     .select("*")
-    .eq("username", urlSlug);
+    .eq("username", username);
 
   if (error) {
     console.error("Error fetching agents:", error.message);
@@ -207,4 +224,24 @@ export const getServerSideProps = async ({ req }) => {
   console.log("gello");
 
   return { props: { agent: data[0] } };
-};
+}
+
+// This function gets called at build time on server-side.
+// It may be called again, on a serverless function, if
+// the path has not been generated.
+export async function getStaticPaths() {
+  const { data, error } = await supabase.from("agents").select("*");
+
+  if (error) {
+    console.error("Error fetching agents:", error.message);
+    return;
+  }
+  const paths = data.map((agent) => ({
+    params: { username: agent.username },
+  }));
+
+  // We'll pre-render only these paths at build time.
+  // { fallback: 'blocking' } will server-render pages
+  // on-demand if the path doesn't exist.
+  return { paths, fallback: "blocking" };
+}
