@@ -60,7 +60,7 @@ const IndexPage = ({ agents }) => {
 
   return (
     <>
-      <Meta />
+      <Meta ogImgUrl="https://gtrvjdtwdfnbjeytdjvv.supabase.co/storage/v1/object/public/sagred/images/meta.png" />
       <div className="flex flex-col items-start justify-center px-2 md:px-0">
         <h3 className="z-50 mt-5 w-full  p-1  text-2xl font-bold text-white">
           Choose to speak
