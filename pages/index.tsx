@@ -50,18 +50,18 @@ const IndexPage = ({ agents }) => {
   return (
     <>
       <Meta />
-      <div className="flex flex-col items-start justify-center">
+      <div className="flex flex-col items-start justify-center px-2 md:px-0">
         <h3 className="z-50 mt-5 w-full  p-1  text-2xl font-bold text-white">
           Choose to speak
         </h3>
       </div>
       <div className="mt-4 flex flex-col items-start justify-center">
-        <h3 className="h-50 m-2 flex w-40 items-start justify-center bg-white p-2 text-lg font-semibold text-black">
+        {/* <h3 className="h-50 m-2 flex w-40 items-start justify-center bg-white p-2 text-lg font-semibold text-black">
           <Link href={`/create`}>
             <p className="flex ">+ Create</p>
           </Link>
-        </h3>
-        <div className="flex h-full max-w-xl flex-wrap items-center justify-start">
+        </h3> */}
+        <div className="flex h-full max-w-xl flex-wrap items-center justify-center md:justify-start">
           {agents.map((agent, indx) => {
             return (
               <div key={indx}>
