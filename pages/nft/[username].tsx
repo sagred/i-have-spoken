@@ -122,7 +122,7 @@ const IndexPage = ({ agent }) => {
   return (
     <>
       <Meta
-        title={`I Have Spoken | ${agent.name}`}
+        title={`I Have Spoken | ${agent.name} - ${agent.description}`}
         description={agent.description}
         ogImgUrl={agent.image_url}
         ogUrl={`https://IHaveSpoken.xyz/nft/${agent.username}`}
