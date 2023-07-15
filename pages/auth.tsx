@@ -5,9 +5,13 @@ import useUser from "../utils/store/useUser";
 import Image from "next/image";
 import GoogleIcon from "../public/icons/google.png";
 import { LinkedInIcon, TwitterIcon } from "../components/Icons";
+import Logo from "../components/ui/Logo";
 
 export default function LoginPage() {
   const router = useRouter();
+
+  const redirect_to = router.query.redirect_to ?? "";
+
   const supabase = useSupabaseClient();
 
   const [loading, setLoading] = useState(false);
@@ -26,6 +30,7 @@ export default function LoginPage() {
 
     const { data: user, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
+      options: { redirectTo: `https://ihavespoken.xyz/${redirect_to}` },
     });
 
     if (error) {
@@ -39,16 +44,14 @@ export default function LoginPage() {
       setLoading(false);
       return;
     }
-
-    // Redirect the user to the homepage after successful login
-    router.push("/");
   };
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex max-w-sm flex-col items-center justify-center md:mx-0">
-          <h3 className="mt-52 text-xl font-semibold">Login</h3>
+      <div className="flex flex-col items-center">
+        <div className="flex max-w-sm flex-col items-center justify-start md:mx-0">
+          <h3 className="mt-20 text-xl font-semibold"></h3>
+          <Logo withName={false} />
           <button
             className="btn mx-10 mt-10 w-full bg-white normal-case text-black hover:bg-neutral-300"
             disabled={loading}
@@ -59,26 +62,6 @@ export default function LoginPage() {
               {loading ? "Loading..." : "Continue with Google"}
             </span>
           </button>
-        </div>
-      </div>
-
-      <div className="absolute bottom-0 flex w-full max-w-md flex-col items-center justify-center">
-        <div className="flex w-full max-w-md items-center justify-center bg-indigo-700 p-2">
-          <a
-            className="mr-5"
-            target={"_blank"}
-            href="https://twitter.com/sagredd"
-          >
-            <span className=" cursor-pointer hover:opacity-80">
-              <TwitterIcon />
-            </span>
-          </a>
-
-          <a target={"_blank"} href="https://linkedin.com/in/sagred/">
-            <span className="cursor-pointer hover:opacity-80 ">
-              <LinkedInIcon />
-            </span>
-          </a>
         </div>
       </div>
     </>

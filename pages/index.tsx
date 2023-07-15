@@ -8,10 +8,11 @@ import Logo from "../components/ui/Logo";
 import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon, LinkedInIcon, TwitterIcon } from "../components/Icons";
-
+import { useRouter } from "next/router";
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import Meta from "../components/Meta";
+import useUser from "../utils/store/useUser";
 
 const supabaseUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co";
 const supabaseKey =
@@ -47,6 +48,16 @@ const Upcoming = ({ imageSrc, name }) => {
 };
 
 const IndexPage = ({ agents }) => {
+  const router = useRouter();
+  const { isUserReady, user } = useUser();
+  useEffect(() => {
+    if (isUserReady) {
+      if (user === null) {
+        router.push(`/auth`);
+      }
+    }
+  }, [supabase, isUserReady]);
+
   return (
     <>
       <Meta />
@@ -99,7 +110,7 @@ const IndexPage = ({ agents }) => {
         <h3 className="z-50 mt-14 w-full bg-white p-1 text-center text-lg font-medium text-black">
           Upcoming
         </h3>
-        <div className="mt-4 flex h-full w-full max-w-5xl flex-wrap items-start justify-start">
+        <div className="mt-4 flex h-full w-full max-w-5xl flex-wrap items-start justify-center md:justify-start">
           <Upcoming imageSrc={Robert} name={"Iron Man"} />
           <Upcoming imageSrc={KR} name={"John Wick"} />
           <Upcoming imageSrc={TH} name={"Spider Man"} />

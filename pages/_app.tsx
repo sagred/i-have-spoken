@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <UserContextProvider>
           <Layout title="I have Spoken">
             <div className="flex">
-              <Logo />
+              <Logo withName={true} />
             </div>
             <Component {...pageProps} />
           </Layout>

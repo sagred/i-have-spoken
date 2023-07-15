@@ -5,7 +5,7 @@ import Logo from "./ui/Logo";
 const Header = () => {
   return (
     <div className="flex w-full flex-col p-3 md:mt-4 md:flex-row md:items-center md:justify-between">
-      <Logo />
+      <Logo withName={false}/>
       <div className="flex flex-col md:mr-5 md:flex-row md:items-center">
         <Link href="/">
           <button className="mt-2 md:mx-5 md:mt-0">Feed</button>

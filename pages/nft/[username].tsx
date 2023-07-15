@@ -38,11 +38,12 @@ const IndexPage = ({ agent }) => {
 
   useEffect(() => {
     if (isUserReady) {
-      // if (user === null) {
-      //   router.push("/auth");
-      // }
+      console.log(user);
+      if (user === null) {
+        router.push(`/auth?redirect_to=nft/${username}`);
+      }
     }
-  }, [supabase, username]);
+  }, [supabase, username, isUserReady]);
 
   const {
     transcript,
