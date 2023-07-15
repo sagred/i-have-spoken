@@ -22,7 +22,6 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const IndexPage = ({ agent }) => {
-  console.log(agent);
   const router = useRouter();
 
   const { username } = router.query;
@@ -38,7 +37,6 @@ const IndexPage = ({ agent }) => {
 
   useEffect(() => {
     if (isUserReady) {
-      console.log(user);
       if (user === null) {
         router.push(`/auth?redirect_to=nft/${username}`);
       }
@@ -222,7 +220,6 @@ export async function getStaticProps({ params }) {
     console.error("Error fetching agents:", error.message);
     return;
   }
-  console.log("gello");
 
   return { props: { agent: data[0] } };
 }

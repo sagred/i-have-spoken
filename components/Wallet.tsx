@@ -4,7 +4,6 @@ import { useApi, useAccount } from "@gear-js/react-hooks";
 const Wallet = () => {
   const { isApiReady } = useApi();
   const { isAccountReady, account, accounts, login } = useAccount();
-  console.log(account, accounts, isApiReady);
   const isAppReady = isApiReady && isAccountReady;
   return (
     <div className="mt-5 border p-2">
