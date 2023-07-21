@@ -50,13 +50,7 @@ const Upcoming = ({ imageSrc, name }) => {
 const IndexPage = ({ agents }) => {
   const router = useRouter();
   const { isUserReady, user } = useUser();
-  useEffect(() => {
-    if (isUserReady) {
-      if (user === null) {
-        router.push(`/auth`);
-      }
-    }
-  }, [supabase, isUserReady]);
+  
 
   return (
     <>
