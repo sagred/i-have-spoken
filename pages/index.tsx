@@ -131,7 +131,10 @@ const IndexPage = ({ agents }) => {
 export default IndexPage;
 
 export const getServerSideProps = async () => {
-  const { data, error } = await supabase.from("agents").select("*");
+  const { data, error } = await supabase
+    .from("agents")
+    .select("*")
+    .eq("is_private", false);
 
   if (error) {
     console.error("Error fetching agents:", error.message);
