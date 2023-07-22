@@ -1,21 +1,29 @@
 import axios from 'axios';
 const { Configuration, OpenAIApi } = require("openai");
+import { createClient } from "@supabase/supabase-js";
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   });
-  const openai = new OpenAIApi(configuration);
+const openai = new OpenAIApi(configuration);
   
 
+
+
+const supabaseUrl = "https://gtrvjdtwdfnbjeytdjvv.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0cnZqZHR3ZGZuYmpleXRkanZ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4MjA0NTU4MSwiZXhwIjoxOTk3NjIxNTgxfQ.ngROr05aRAXWDnPvI3xpvxfBjzLvb36_8TBv6Ouwb2c";
+const supabase = createClient(supabaseUrl, supabaseKey);
+
 export default async function handler(req, res) {
-  const { text, actor, voice_id } = req.body;
+  const { text, actor, voice_id, user_id } = req.body;
 //YcxoHAHbwyYtOgZkDFya - Elon
   //fE5q6eHg0oQ7PyXTVJ1d - SRK
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: text,
     temperature: 0.5,
-    max_tokens: 30,
+    max_tokens: 40,
     top_p: 1.0,
     frequency_penalty: 0.5,
     presence_penalty: 0.0,
@@ -24,6 +32,12 @@ export default async function handler(req, res) {
 
   const responseText = response.data.choices[0].text
   const altertedRestext = responseText.replace(/\n/g, '');
+
+  const {error} =  await supabase
+  .from('chat')
+  .insert({ user_id: user_id, user_message: text, ai_message: responseText })
+
+  console.log(error)
 
   const headers = {
     'xi-api-key': process.env.API_KEY,

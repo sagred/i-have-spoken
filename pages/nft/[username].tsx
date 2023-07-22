@@ -82,6 +82,7 @@ const IndexPage = ({ agent }) => {
           text: agent.prompt + "\n" + transcript,
           actor: agent.name,
           voice_id: agent.audio_id,
+          user_id: user.id
         }),
       });
 
