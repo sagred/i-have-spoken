@@ -33,6 +33,8 @@ export default async function handler(req, res) {
   const responseText = response.data.choices[0].text
   const altertedRestext = responseText.replace(/\n/g, '');
 
+  console.log("1", responseText)
+
   const {error} =  await supabase
   .from('chat')
   .insert({ user_id: user_id, user_message: text, ai_message: responseText })
