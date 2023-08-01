@@ -21,9 +21,9 @@ export default async function handler(req, res) {
   //fE5q6eHg0oQ7PyXTVJ1d - SRK
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: text,
+    prompt: text + "Write a reply in less than 300 characters",
     temperature: 0.5,
-    max_tokens: 40,
+    max_tokens: 60,
     top_p: 1.0,
     frequency_penalty: 0.5,
     presence_penalty: 0.0,
